@@ -16,7 +16,7 @@ test('Verify login with valid credentials', async ({ page }) => {
   await page.locator(passwordLocator).fill(password)
   await page.locator(submitLocator).click()
 
-  await expect(page).toHaveURL('https://practicesoftwaretesting.com/account')
+  await expect(page).toHaveURL('/account')
 
   await expect(page.locator(titleLocator)).toHaveText('My account')
 
